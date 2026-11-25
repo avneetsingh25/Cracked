@@ -1,0 +1,5 @@
+.register-page {
+    background:
+        radial-gradient(ellipse at 88% 18%, rgba(80, 120, 255, 0.09), transparent 34%),
+        linear-gradient(135deg, #f8faff 0%, #f3f6fc 100%);
+}

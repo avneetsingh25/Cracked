@@ -1,0 +1,190 @@
+.create-interview-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(5px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 2000;
+    padding: 20px;
+}
+
+.create-interview-card {
+    width: 100%;
+    max-width: 650px;
+
+    background: white;
+    border-radius: 18px;
+
+    padding: 32px;
+
+    box-shadow: 0 25px 70px rgba(15, 23, 42, 0.2);
+}
+
+.create-interview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    margin-bottom: 28px;
+}
+
+.create-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #2563eb;
+
+    margin-bottom: 6px;
+}
+
+.create-interview-header h2 {
+    font-size: 26px;
+    color: #111827;
+    margin-bottom: 5px;
+}
+
+.create-interview-header p:last-child {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.close-btn {
+    border: none;
+    background: #f3f4f6;
+
+    width: 36px;
+    height: 36px;
+
+    border-radius: 50%;
+
+    font-size: 25px;
+    line-height: 1;
+
+    cursor: pointer;
+    color: #374151;
+
+    transition: 0.2s;
+}
+
+.close-btn:hover {
+    background: #e5e7eb;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #374151;
+
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+
+    font-size: 14px;
+    color: #111827;
+
+    background: white;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+.create-interview-actions {
+    display: flex;
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    margin-top: 10px;
+}
+
+.cancel-btn,
+.create-btn {
+    padding: 12px 22px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.cancel-btn {
+    border: 1px solid #d1d5db;
+    background: white;
+
+    color: #374151;
+}
+
+.cancel-btn:hover {
+    background: #f9fafb;
+}
+
+.create-btn {
+    border: none;
+
+    background: #2563eb;
+    color: white;
+}
+
+.create-btn:hover {
+    background: #1d4ed8;
+}
+
+@media (max-width: 600px) {
+
+    .create-interview-card {
+        padding: 24px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .create-interview-actions {
+        flex-direction: column-reverse;
+    }
+
+    .cancel-btn,
+    .create-btn {
+        width: 100%;
+    }
+}

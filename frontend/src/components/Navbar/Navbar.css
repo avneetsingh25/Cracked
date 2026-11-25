@@ -1,0 +1,167 @@
+.navbar {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 72px;
+    padding: 0 55px;
+    border-bottom: 1px solid #e8edf5;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(16px);
+}
+
+.navbar-logo {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 11px;
+    color: #101828;
+    text-decoration: none;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.navbar-logo h2 {
+    font-size: 19px;
+    font-weight: 750;
+    letter-spacing: -0.5px;
+}
+
+.navbar-logo p {
+    margin-top: 1px;
+    color: #778198;
+    font-size: 11px;
+    letter-spacing: 0.4px;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+    list-style: none;
+}
+
+.navbar-links a {
+    color: #1f2937;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.navbar-links a:hover,
+.login-btn:hover {
+    color: #315de8;
+}
+
+.navbar-actions {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 20px;
+}
+
+.moon-icon {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.login-btn {
+    color: #111827;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.signup-btn {
+    font-size: 15px;
+    text-decoration: none;
+    background: #2563eb;
+    color: white;
+    padding: 12px 26px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.signup-btn:hover {
+    background-color: #113cd9;
+}
+
+.navbar-home .navbar-links a:hover {
+    color: rgb(6, 34, 245);
+}
+
+.navbar-home .login-btn:hover {
+    color: rgb(6, 34, 252);
+}
+
+.navbar-app .navbar-actions .signup-btn {
+    display: inline-flex;
+    min-height: 42px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 19px;
+    border: 1px solid #315de8;
+    border-radius: 10px;
+    background: #315de8;
+    box-shadow: 0 5px 12px rgba(49, 93, 232, 0.16);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 650;
+}
+
+.navbar-app .navbar-actions .signup-btn:hover {
+    background: #244bc9;
+}
+
+@media (max-width: 900px) {
+    .navbar-home {
+        padding: 0 24px;
+    }
+
+    .navbar-home .navbar-links {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 760px) {
+    .navbar {
+        height: 66px;
+        padding: 0 20px;
+    }
+
+    .navbar-app .navbar-links,
+    .navbar-home .navbar-links {
+        display: none;
+    }
+
+    .navbar-actions {
+        gap: 16px;
+    }
+
+    .navbar-app .signup-btn {
+        min-height: 39px;
+        padding: 0 13px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar-app .navbar-logo p {
+        display: none;
+    }
+
+    .navbar-actions {
+        gap: 12px;
+    }
+}
